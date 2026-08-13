@@ -1,0 +1,40 @@
+/* ===================================================================
+   COMPONENTES — marca, botones y chips reutilizables
+   =================================================================== */
+
+/* ---------- Marca ---------- */
+.brand{display:flex;align-items:center;gap:12px;color:var(--navy);text-decoration:none}
+.brand .mark{width:42px;height:42px;flex:0 0 auto;display:block}
+.brand .name{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:-.02em;color:inherit}
+.brand .tag{font-size:.7rem;color:var(--muted);font-family:var(--mono);letter-spacing:.02em}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--body);font-weight:600;font-size:.92rem;
+  padding:11px 20px;border-radius:10px;border:0;cursor:pointer;
+  text-decoration:none;transition:transform .15s ease, box-shadow .2s ease, background .2s, border-color .2s, color .2s;
+}
+.btn-lg{padding:15px 28px;font-size:1rem}
+
+/* Acción principal: naranja sobre blanco */
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 6px 18px var(--orange-22)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(237,75,0,.34)}
+
+/* Acción secundaria: azul sólido */
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 6px 18px var(--blue-18)}
+.btn-blue:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(32,0,177,.28)}
+
+/* Sobre fondo claro */
+.btn-ghost{background:var(--paper);color:var(--navy);border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+/* Sobre fondo oscuro */
+.btn-outline{background:transparent;color:#fff;border:1px solid var(--line-dark)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* ---------- Chips ---------- */
+.chip{
+  font-family:var(--mono);font-size:.72rem;padding:7px 12px;border-radius:8px;
+  background:rgba(255,255,255,.08);border:1px solid var(--line-dark);color:#fff;
+}

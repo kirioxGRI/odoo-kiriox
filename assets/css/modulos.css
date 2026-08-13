@@ -1,0 +1,45 @@
+/* ===================================================================
+   CARRUSEL DE MÓDULOS
+   =================================================================== */
+.carousel-top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.car-controls{display:flex;gap:10px}
+.car-btn{
+  width:46px;height:46px;border-radius:12px;border:1px solid var(--line-strong);
+  background:var(--paper);cursor:pointer;display:grid;place-items:center;
+  font-size:1.2rem;color:var(--navy);transition:all .18s;
+}
+.car-btn:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.car-btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+.carousel{
+  display:flex;gap:18px;margin-top:30px;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;padding-bottom:10px;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.carousel::-webkit-scrollbar{display:none}
+
+.mcard{
+  flex:0 0 300px;scroll-snap-align:start;
+  background:var(--paper);border:1px solid var(--line);border-radius:16px;
+  padding:22px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+  display:flex;flex-direction:column;gap:12px;min-height:186px;
+}
+.mcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue)}
+.mcard .mhead{display:flex;align-items:center;gap:12px}
+.mcard .mico{
+  width:44px;height:44px;border-radius:11px;flex:0 0 auto;display:grid;place-items:center;
+  font-size:1.25rem;background:var(--blue-10);color:var(--blue);
+}
+.mcard .mnum{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:auto}
+.mcard h3{font-size:1.1rem;font-weight:600}
+.mcard p{font-size:.9rem;color:var(--muted)}
+.mcard .mcat{
+  margin-top:auto;font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--orange);
+}
+
+.car-note{margin-top:16px;font-size:.85rem;color:var(--muted);font-family:var(--mono)}
+
+@media(max-width:520px){.mcard{flex-basis:82vw}}

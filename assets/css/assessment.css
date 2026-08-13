@@ -1,0 +1,77 @@
+/* ===================================================================
+   ASSESSMENT — copy + formulario
+   =================================================================== */
+.as-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start;margin-top:14px}
+.as-copy h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;margin:12px 0 14px}
+.as-copy p{color:var(--muted);margin-bottom:26px}
+
+/* ---------- Metodología: assessment → roadmap → discovery → implementación ---------- */
+.method{list-style:none;position:relative;margin-top:8px;display:flex;flex-direction:column;gap:22px}
+.method::before{
+  content:"";position:absolute;left:17px;top:14px;bottom:14px;width:2px;
+  background:linear-gradient(180deg,var(--orange) 0%,var(--blue) 28%,var(--line-strong) 100%);
+}
+.mstep{display:flex;gap:16px;align-items:flex-start;position:relative}
+.mstep .snum{
+  width:36px;height:36px;border-radius:50%;flex:0 0 auto;z-index:1;
+  display:grid;place-items:center;
+  font-family:var(--mono);font-size:.78rem;font-weight:500;
+  background:var(--paper);color:var(--blue);border:2px solid var(--blue);
+}
+.mstep.is-entry .snum{background:var(--orange);border-color:var(--orange);color:#fff}
+.mstep h3{font-size:1.02rem;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.mstep p{margin:0;font-size:.92rem;color:var(--muted)}
+.badge-free{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:600;color:var(--orange);background:var(--orange-08);
+  border:1px solid var(--orange);border-radius:999px;padding:3px 9px;
+}
+
+/* ---------- Formulario ---------- */
+.form{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:30px;box-shadow:var(--shadow-lg);
+}
+.form h3{font-size:1.2rem;font-weight:600;margin-bottom:4px}
+.form .fsub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px;display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.82rem;font-weight:600;color:var(--navy)}
+.field label .req{color:var(--orange)}
+.field input,.field select{
+  font-family:var(--body);font-size:.92rem;padding:11px 13px;border-radius:10px;
+  border:1px solid var(--line-strong);background:var(--white);color:var(--ink);width:100%;
+  transition:border-color .18s, box-shadow .18s;
+}
+.field input::placeholder{color:#9AA0BC}
+.field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-18)}
+
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:4px 0}
+.check{
+  display:flex;align-items:center;gap:9px;font-size:.86rem;color:var(--ink);cursor:pointer;
+  padding:8px 10px;border:1px solid var(--line-strong);border-radius:9px;background:var(--white);
+  transition:border-color .15s,background .15s;
+}
+.check:hover{border-color:var(--blue)}
+.check input{width:16px;height:16px;accent-color:var(--blue);flex:0 0 auto}
+.check.on{border-color:var(--blue);background:var(--blue-05)}
+
+.form .btn{width:100%;justify-content:center;margin-top:8px}
+.form-hint{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center;font-family:var(--mono)}
+
+/* Mensajes de resultado */
+.form-ok{
+  display:none;margin-top:16px;padding:16px;border-radius:12px;
+  font-size:.9rem;line-height:1.6;border:1px solid transparent;
+}
+.form-ok.show{display:block}
+.form-ok.ok{background:var(--blue-05);border-color:var(--blue);color:var(--blue)}
+.form-ok.ok a{color:var(--blue);font-weight:600}
+.form-ok.error{background:var(--orange-08);border-color:var(--orange);color:#B03900}
+.form-ok.error b{color:#8F2E00}
+
+@media(max-width:900px){
+  .as-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .checks{grid-template-columns:1fr}
+}

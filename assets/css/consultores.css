@@ -1,0 +1,47 @@
+/* ===================================================================
+   CONSULTORES — tarjetas de contacto directo
+   =================================================================== */
+.cons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+
+.ccard{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:28px 24px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  box-shadow:var(--shadow-sm);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.ccard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue)}
+
+/* ---------- Avatar ---------- */
+.cavatar{
+  width:104px;height:104px;border-radius:50%;margin-bottom:14px;
+  display:grid;place-items:center;overflow:hidden;position:relative;
+  font-family:var(--display);font-weight:700;font-size:1.7rem;color:#fff;
+  letter-spacing:.02em;flex:0 0 auto;
+  box-shadow:0 0 0 4px var(--paper), 0 0 0 6px var(--line);
+}
+.cavatar img{width:100%;height:100%;object-fit:cover;display:block}
+.av-1{background:linear-gradient(140deg,var(--blue) 0%,var(--navy) 78%)}
+.av-2{background:linear-gradient(140deg,var(--orange) 0%,#B03900 82%)}
+.av-3{background:linear-gradient(140deg,var(--navy) 0%,var(--blue) 82%)}
+
+/* ---------- Datos ---------- */
+.ccard h3{font-size:1.12rem;font-weight:600}
+.ccard .crol{font-size:.88rem;color:var(--blue);font-weight:600}
+.ccard .czona{font-size:.82rem;color:var(--muted)}
+.ccard .ctel{
+  font-size:.9rem;color:var(--navy);text-decoration:none;
+  border-bottom:1px dashed var(--line-strong);padding-bottom:2px;margin:6px 0 14px;
+  transition:color .18s,border-color .18s;
+}
+.ccard .ctel:hover{color:var(--orange);border-color:var(--orange)}
+.ccard .cbtn{margin-top:auto;width:100%;justify-content:center}
+
+/* ---------- Nota de cierre ---------- */
+.cons-note{
+  margin-top:26px;font-family:var(--mono);font-size:.84rem;
+  color:var(--muted);text-align:center;
+}
+.cons-note a{color:var(--blue);font-weight:600}
+
+@media(max-width:900px){.cons-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto}}

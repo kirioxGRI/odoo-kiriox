@@ -1,0 +1,12 @@
+# ===================================================================
+#  Redirecciones para Cloudflare Pages
+#  https://developers.cloudflare.com/pages/configuration/redirects/
+# ===================================================================
+
+# Nombre anterior del archivo, por si quedó compartido en algún enlace
+/kiriox-odoo-partner.html    /    301
+
+# Atajos cómodos para campañas o material impreso
+/assessment                  /#assessment    302
+/consultoras                 /#consultores   302
+/modulos                     /#modulos       302

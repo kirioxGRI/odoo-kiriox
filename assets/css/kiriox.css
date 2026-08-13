@@ -1,0 +1,28 @@
+/* ===================================================================
+   POR QUÉ KIRIOX — lista clara + panel navy de acento
+   =================================================================== */
+.kx-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-top:20px}
+
+.kx-list{display:flex;flex-direction:column;gap:20px}
+.kx-item{display:flex;gap:16px}
+.kx-item .kn{
+  font-family:var(--mono);font-weight:500;font-size:.8rem;color:#fff;
+  background:var(--blue);width:34px;height:34px;border-radius:9px;
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.kx-item:nth-child(even) .kn{background:var(--orange)}
+.kx-item h3{font-size:1.08rem;font-weight:600;margin-bottom:4px}
+.kx-item p{font-size:.94rem;color:var(--muted)}
+
+.kx-panel{
+  background:
+    radial-gradient(520px 320px at 90% 0%, rgba(32,0,177,.55), transparent 65%),
+    var(--navy);
+  color:#fff;border-radius:var(--radius-lg);padding:30px;position:relative;overflow:hidden;
+}
+.kx-panel .eyebrow{color:var(--orange)}
+.kx-panel h3{font-size:1.4rem;font-weight:600;margin:12px 0 14px;color:#fff}
+.kx-panel p{color:var(--muted-light);font-size:.95rem;margin-bottom:18px}
+.kx-panel .dgii{display:flex;flex-wrap:wrap;gap:9px}
+
+@media(max-width:900px){.kx-grid{grid-template-columns:1fr;gap:30px}}

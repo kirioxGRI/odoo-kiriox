@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kiriox">
+  <title>Kiriox</title>
+  <!-- Red de nodos -->
+  <g stroke="rgba(255,255,255,.45)" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M247 235 L352 150"/>
+    <path d="M247 235 L432 222"/>
+    <path d="M247 235 L410 320"/>
+    <path d="M247 235 L348 368"/>
+    <path d="M352 150 L432 222"/>
+    <path d="M432 222 L410 320"/>
+    <path d="M410 320 L348 368"/>
+  </g>
+  <g fill="rgba(255,255,255,.55)">
+    <circle cx="352" cy="150" r="20"/>
+    <circle cx="432" cy="222" r="20"/>
+    <circle cx="410" cy="320" r="20"/>
+    <circle cx="348" cy="368" r="20"/>
+  </g>
+  <!-- Isotipo K -->
+  <g fill="#FFFFFF">
+    <path d="M83 83 H144 V204 L263 85 H344 L83 346 Z"/>
+    <path d="M150 255 L346 367 V419 L150 307 Z"/>
+  </g>
+  <!-- Nodo activo -->
+  <circle cx="247" cy="235" r="29" fill="#ED4B00"/>
+</svg>
