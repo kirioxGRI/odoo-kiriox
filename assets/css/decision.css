@@ -1,0 +1,18 @@
+/* ===================================================================
+   DECISIÓN EJECUTIVA — prueba de confianza y razones para avanzar
+   =================================================================== */
+.decision-section{padding:70px 0}
+.decision-grid{display:grid;grid-template-columns:repeat(3,1fr) 1.22fr;gap:16px;margin-top:34px}
+.decision-card,.decision-callout{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);padding:24px}
+.decision-card{min-height:230px;display:flex;flex-direction:column}
+.decision-number{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--orange);margin-bottom:auto}
+.decision-card h3{font-size:1.1rem;margin:26px 0 8px}
+.decision-card p,.decision-callout p{font-size:.9rem;color:var(--muted)}
+.decision-callout{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:var(--shadow-lg)}
+.decision-callout .eyebrow{color:#C8C3FF;margin-bottom:14px}
+.decision-callout h3{color:#fff;font-size:1.28rem;margin-bottom:10px}
+.decision-callout p{color:rgba(255,255,255,.74);margin-bottom:18px}
+.decision-callout a{font-weight:600;color:#fff;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:4px}
+
+@media(max-width:980px){.decision-grid{grid-template-columns:repeat(2,1fr)}.decision-callout{grid-column:span 2}}
+@media(max-width:580px){.decision-grid{grid-template-columns:1fr}.decision-callout{grid-column:auto}.decision-card{min-height:0}}

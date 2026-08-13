@@ -36,8 +36,6 @@
     const nombre  = val('f_nombre');
     const email   = val('f_email');
     const tel     = val('f_tel');
-    const users   = val('f_users');
-    const actual  = val('f_actual');
     const areas   = [...document.querySelectorAll('#areas input:checked')].map(c => c.value);
 
     if (!empresa || !nombre || !email) {
@@ -46,23 +44,21 @@
     }
 
     const msg =
-`Hola Kiriox, quiero solicitar un assessment de Odoo.
+`Hola Kiriox, quiero agendar una conversación ejecutiva sobre Odoo.
 
 Empresa: ${empresa}
 Contacto: ${nombre}
 Correo: ${email}
 WhatsApp/Tel: ${tel || '—'}
-Usuarios estimados: ${users}
-Sistema actual: ${actual}
-Áreas de interés: ${areas.length ? areas.join(', ') : '—'}`;
+Prioridad a conversar: ${areas.length ? areas.join(', ') : '—'}`;
 
     const wa   = `https://wa.me/${cfg.WHATSAPP}?text=${encodeURIComponent(msg)}`;
-    const mail = `mailto:${cfg.EMAIL}?subject=${encodeURIComponent('Solicitud de assessment Odoo — ' + empresa)}&body=${encodeURIComponent(msg)}`;
+    const mail = `mailto:${cfg.EMAIL}?subject=${encodeURIComponent('Conversación ejecutiva Odoo — ' + empresa)}&body=${encodeURIComponent(msg)}`;
 
     window.open(wa, '_blank', 'noopener');
 
     mostrar('ok',
-      `¡Listo, ${esc(nombre)}! Abrimos WhatsApp con tu solicitud. Si no se abrió, ` +
+      `¡Listo, ${esc(nombre)}! Abrimos WhatsApp con el contexto de tu conversación. Si no se abrió, ` +
       `<a href="${esc(wa)}" target="_blank" rel="noopener">toca aquí</a> o escríbenos por ` +
       `<a href="${esc(mail)}">correo</a>.`);
   });
